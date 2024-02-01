@@ -1,0 +1,29 @@
+@SimpleAuth_HostAddress = http://localhost:5120
+@JwtToken = Bearer CfDJ8AHJoIlOlGxAhmAN-RF928eipmSj2CPsYKMdZSrnYeqNzGaL9L_VihnuLVYHqzFvLDtHlU3Yvs9ccVDGKliQvgCS3-CNlG3MrTGBDukOkazaTKV8ck9vdKNDb2YVKOMRsAnw7BFQ6W30zZNcz69bBffvOWznpu4oPZVY9eN2oKQrELLNG2lT5HBNHzzCQiW2YDNQn97HelCQNFY5hrTEb9UOsDmBOjARo0qLUIYbPycucW8BLlMAXx9qxW6rlVg34voVdjNkoWZqtZTDTjR2bqN8vGZdy3GAAjIafFzfArdkGbPppEdEvgOSDcu6MWx6VqrzSJ3t7juTSxvwJJ-myodbn9zlb173wl_gS8M5M0JZR2IkE68F73t4y3nKHYDGwwdsFeJXTCPTgHc-LaHy6dhARz2SrT2u4IU6o5L6XyPtLYSrCU4aoaJsK1T60p9b81JaUGqOOsTY5dmymQXndBztUpulx4K4vrMiTAO4ImnrGwqYpWjHigKddLExtHxnmdSKrqBsnOMy3n4utKRmlbNP0h_dy7S2b1t5Q5SP4zWLN5CZLrb9QqNhSR-wISLtZ9vjCYxUnj-2Gtg6NWJsrHL4NjuDadSphvY10iXpR1NxXj-AOdWkMiFm2CeIqoeo5iUPbOjreaEHkp2tRE8qEzOKbFioNVxF78mm9Msx-Fm21RidCF775vQdJeXbmSDULw
+
+### Register
+
+POST {{SimpleAuth_HostAddress}}/register
+Accept: */*
+Content-Type: application/json
+
+{
+  "email": "teste@email.com",
+  "password": "P@ssw0rd"
+}
+
+### Login
+
+POST {{SimpleAuth_HostAddress}}/login
+Accept: */*
+Content-Type: application/json
+
+{
+  "email": "teste@email.com",
+  "password": "P@ssw0rd"
+}
+
+### Auth Test
+
+GET {{SimpleAuth_HostAddress}}/auth/health
+Authorization: {{JwtToken}}
