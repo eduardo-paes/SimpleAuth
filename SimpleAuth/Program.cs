@@ -41,6 +41,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Add auth
 app.UseAuthorization();
 
 app.MapGet("/auth/health", (ClaimsPrincipal claim) => $"Hello {claim.Identity.Name}")
